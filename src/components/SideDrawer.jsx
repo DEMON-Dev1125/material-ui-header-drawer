@@ -31,7 +31,7 @@ const SideDrawer = () => {
     { title: `contact`, path: `/contact` },
     { title: `faq`, path: `/faq` },
   ];
-  const [state, setState] = useState({ top: false }); // Add this
+  const [state, setState] = useState({ left: false }); // Add this
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -67,17 +67,17 @@ const SideDrawer = () => {
       <IconButton
         edge="start"
         aria-label="menu"
-        onClick={toggleDrawer("top", true)}
+        onClick={toggleDrawer("left", true)}
       >
         <Menu fontSize="large" style={{ color: `white` }} />
       </IconButton>
       <Drawer
-        anchor="top"
-        open={state.top}
-        onOpen={toggleDrawer("top", true)}
-        onClose={toggleDrawer("top", false)}
+        anchor="left"
+        open={state.left}
+        onOpen={toggleDrawer("left", true)}
+        onClose={toggleDrawer("left", false)}
       >
-        {sideDrawerList("top")}
+        {sideDrawerList("left")}
       </Drawer>
     </React.Fragment>
   );
